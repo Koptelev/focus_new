@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Кастомные стили */
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+.progress-bar {
+    transition: width 0.3s ease;
+}
+input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 2px 4px;
+}
+input[type="text"]:focus {
+    outline: none;
+    border-bottom-color: #3b82f6;
+}
+.border-l-4 {
+    transition: all 0.3s ease;
+}
+.border-l-4:hover {
+    padding-left: 1.25rem;
+}
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
