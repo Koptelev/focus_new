@@ -64,6 +64,8 @@
 <!-- Блок приветствия и квалификации -->
 <section class="section" id="greeting">
 <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+<!-- Кнопка Назад -->
+<button class="mt-2 mb-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg transition duration-300 hover-scale" onclick="prevSection()">Назад</button>
 <div class="space-y-6">
 <div class="border-l-4 border-blue-500 pl-4">
 <h2 class="text-xl font-bold text-gray-800 mb-2">Скрипт первичного контакта</h2>
@@ -95,6 +97,8 @@
 <!-- Блок выбора должности -->
 <section class="section" id="position">
 <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+<!-- Кнопка Назад -->
+<button class="mt-2 mb-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg transition duration-300 hover-scale" onclick="prevSection()">Назад</button>
 <h2 class="text-2xl font-bold text-gray-800 mb-6">Выберите должность собеседника</h2>
 <!-- Скрипт презентации -->
 <div class="mt-8 p-6 bg-gray-50 rounded-lg mb-8">
@@ -134,6 +138,8 @@
 <!-- Вопросы -->
 <section class="section fade-in" id="questions">
 <div class="bg-white rounded-xl shadow-lg p-8">
+<!-- Кнопка Назад -->
+<button class="mt-2 mb-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg transition duration-300 hover-scale" onclick="prevSection()">Назад</button>
 <h2 class="text-2xl font-bold text-gray-800 mb-6">Вопросы</h2>
 <div id="questionsList"></div>
 </div>
@@ -141,6 +147,8 @@
 <!-- Рекомендации -->
 <section class="section fade-in" id="recommendations">
 <div class="bg-white rounded-xl shadow-lg p-8">
+<!-- Кнопка Назад -->
+<button class="mt-2 mb-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg transition duration-300 hover-scale" onclick="prevSection()">Назад</button>
 <h2 class="text-2xl font-bold text-gray-800 mb-6">Рекомендуемые функции</h2>
 <div class="border-l-4 border-blue-500 pl-4 mb-6">
 <h3 class="text-lg font-bold text-gray-800 mb-2">Пример работы с системой</h3>
@@ -182,6 +190,8 @@
 <!-- Формирование цены -->
 <section class="section fade-in" id="pricing">
   <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+  <!-- Кнопка Назад -->
+  <button class="mt-2 mb-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg transition duration-300 hover-scale" onclick="prevSection()">Назад</button>
     <h2 class="text-2xl font-bold text-gray-800 mb-6">Формирование цены</h2>
     <div class="space-y-6">
       <div class="bg-gray-50 border-l-4 border-blue-500 p-6 rounded-xl mb-6">
@@ -214,6 +224,8 @@
 <!-- Закрытие сделки -->
 <section class="section fade-in" id="deal-closing">
   <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+  <!-- Кнопка Назад -->
+  <button class="mt-2 mb-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg transition duration-300 hover-scale" onclick="prevSection()">Назад</button>
     <h2 class="text-2xl font-bold text-gray-800 mb-6">Закрытие сделки</h2>
     <div class="space-y-6">
       <div class="bg-gray-50 border-l-4 border-green-500 p-6 rounded-xl mb-6">
@@ -247,6 +259,8 @@
 <!-- Завершение -->
 <section class="section fade-in" id="closing">
 <div class="bg-white rounded-xl shadow-lg p-8">
+<!-- Кнопка Назад -->
+<button class="mt-2 mb-4 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg transition duration-300 hover-scale" onclick="prevSection()">Назад</button>
 <h2 class="text-2xl font-bold text-gray-800 mb-6">Отлично! 🎉</h2>
 <div class="text-lg text-gray-600 mb-6" id="closingText"></div>
 <button class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg transition duration-300 hover-scale" onclick="sendSummary()">
@@ -1222,6 +1236,14 @@
                 content.innerHTML = '';
             }
         };
+
+        // Функция для перехода к предыдущей секции
+        function prevSection() {
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+                showSection(sections[currentSectionIndex]);
+            }
+        }
     </script>
 </body>
 </html>
